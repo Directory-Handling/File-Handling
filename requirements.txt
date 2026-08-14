@@ -1,0 +1,25 @@
+asgiref==3.12.1
+boto3==1.43.68
+botocore==1.43.68
+Django==5.1.4
+djangorestframework==3.18.0
+jmespath==1.1.0
+python-dateutil==2.9.0.post0
+s3transfer==0.19.2
+six==1.17.0
+sqlparse==0.5.5
+urllib3==2.7.0
+
+# --- Added for the upload/scan pipeline ---
+celery==5.4.0
+redis==5.2.1
+python-magic==0.4.27
+Pillow==11.1.0
+pyclamd==0.4.0
+requests==2.32.3
+cryptography==43.0.3
+gunicorn==23.0.0
+
+# --- Dev / test only (not needed in production image) ---
+pytest==8.3.4
+pytest-django==4.9.0

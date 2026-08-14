@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "UploadPipelineS3Access",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "s3:HeadObject"
+      ],
+      "Resource": "arn:aws:s3:::file-handling-uploads/uploads/*"
+    },
+    {
+      "Sid": "UploadPipelineBucketList",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::file-handling-uploads",
+      "Condition": {
+        "StringLike": { "s3:prefix": "uploads/*" }
+      }
+    }
+  ]
+}
